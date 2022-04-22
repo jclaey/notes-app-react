@@ -1,8 +1,13 @@
 import React from 'react';
+import Navbar from './Navbar';
+import Form from './Form';
 
 const App = () => {
   return (
-    <h1>My App</h1>
+    <div className="container">
+      <Navbar />
+      <Form />
+    </div>
   );
 };
 
