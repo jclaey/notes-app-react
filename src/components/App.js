@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from './Navbar';
-import Form from './Form';
+import NoteForm from './NoteForm';
 
 const App = () => {
   return (
     <div className="container">
       <Navbar />
-      <Form />
+      <NoteForm />
     </div>
   );
 };
