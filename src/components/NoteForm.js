@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = () => {
+const NoteForm = () => {
   return (
     <form>
       <label htmlFor='title'>
@@ -15,4 +15,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default NoteForm;

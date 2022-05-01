@@ -7,13 +7,10 @@ const Navbar = () => {
       <div id="left-nav">
         <ul>
           <li>
-            <Link to='index.html'>
-              <i className="fa-solid fa-note-sticky"></i>
-              Home
-            </Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
-            <Link to='search.html'>Search</Link>
+            <Link to='/search'>Search</Link>
           </li>
         </ul>
       </div>

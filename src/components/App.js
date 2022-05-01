@@ -1,13 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
-import NoteForm from './NoteForm';
+import Home from './pages/Home';
+import Search from './pages/Search';
 
 const App = () => {
   return (
-    <div className="container">
-      <Navbar />
-      <NoteForm />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} exact />
+            <Route path="/search" element={<Search />} exact />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 };
 
