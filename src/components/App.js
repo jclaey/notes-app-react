@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
-import Home from './pages/Home';
-import Search from './pages/Search';
+import HomePage from './pages/HomePage';
+import SearchPage from './pages/SearchPage';
+import EditPage from './pages/EditPage';
 import './App.css';
 
 const App = () => {
@@ -12,8 +13,9 @@ const App = () => {
         <Navbar />
         <div className="container">
           <Routes>
-            <Route path="/" element={<Home />} exact />
-            <Route path="/search" element={<Search />} exact />
+            <Route path="/" element={<HomePage />} exact />
+            <Route path="/search" element={<SearchPage />} exact />
+            <Route path='/edit' element={<EditPage />} exact />
           </Routes>
         </div>
       </div>

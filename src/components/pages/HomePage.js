@@ -1,7 +1,7 @@
 import React from 'react';
 import NoteForm from '../NoteForm';
 
-const Home = () => {
+const HomePage = () => {
    return (
      <>
        <h1>Create Note</h1>
@@ -12,4 +12,4 @@ const Home = () => {
    );
 };
 
-export default Home;
+export default HomePage;
