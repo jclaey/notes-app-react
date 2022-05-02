@@ -11,6 +11,7 @@ const NoteForm = () => {
         <strong>Body</strong>
       </label>
       <input className='u-full-width' type='text' id='body' placeholder='Enter note body...' />
+      <button type="submit">Save Note</button>
     </form>
   );
 };

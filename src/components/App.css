@@ -1,0 +1,11 @@
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.heading-1 {
+  margin-bottom: 4rem;
+}
