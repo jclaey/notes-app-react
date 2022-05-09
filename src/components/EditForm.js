@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const NoteForm = ({ onCreateSubmit }) => {
+const CreateForm = ({ onEditSubmit, note }) => {
   const [title, setTitle] = useState('');
   const [body, setBody] = useState('');
 
+  useEffect(() => {
+    if (note) {
+      document.querySelector('#title').value = note.title;
+      document.querySelector('#body').value = note.body;
+    }
+  }, [note]);
+
   return (
-    <form onSubmit={e => onCreateSubmit(e, title, body)}>
+    <form onSubmit={e => onEditSubmit(e, title, body)}>
       <label htmlFor='title'>
         <strong>Title</strong>
       </label>
       <input 
         className='u-full-width' 
         type="text" 
-        id="title" 
+        id="title"
         placeholder='Enter note title...'
         onChange={e => setTitle(e.target.value)}
         value={title}
@@ -33,4 +40,4 @@ const NoteForm = ({ onCreateSubmit }) => {
   );
 };
 
-export default NoteForm;
+export default CreateForm;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NoteForm from '../NoteForm';
+import { Link } from 'react-router-dom';
+import CreateForm from '../CreateForm';
 
 const HomePage = () => {
   const [notes, setNotes] = useState([]);
@@ -34,7 +35,9 @@ const HomePage = () => {
   const renderedNotes = notes.map(note => {
     return (
       <div key={note.id}>
-        <h5>{note.title}</h5>
+        <Link to={`/edit/${note.id}`}>
+          <h5>{note.title}</h5>
+        </Link>
         <p>{note.body}</p>
         <hr />
       </div>
@@ -44,8 +47,8 @@ const HomePage = () => {
    return (
      <>
        <h1>Create Note</h1>
-       <NoteForm onCreateSubmit={onCreateSubmit} />
-       <h3 style={{ marginBottom: '4rem' }}>My Notes</h3>
+       <CreateForm onCreateSubmit={onCreateSubmit} />
+       <h3>My Notes</h3>
        {notes.length > 0 ? renderedNotes : <p>No notes yet.</p>}
      </>
    );
