@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import CreateForm from '../CreateForm';
+import ListItem from '../ListItem';
 
 const HomePage = () => {
   const [notes, setNotes] = useState([]);
@@ -33,15 +33,7 @@ const HomePage = () => {
   };
 
   const renderedNotes = notes.map(note => {
-    return (
-      <div key={note.id}>
-        <Link to={`/edit/${note.id}`}>
-          <h5>{note.title}</h5>
-        </Link>
-        <p>{note.body}</p>
-        <hr />
-      </div>
-    );
+    return <ListItem note={note} key={note.id} />;
   });
 
    return (
